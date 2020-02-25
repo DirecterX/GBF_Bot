@@ -20,7 +20,7 @@ while play:
 #            Function.Summon_OK()          
         elif pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218))!=None: #Attack
             if attack == True:
-                time.sleep(2.8)
+                time.sleep(4.2)
                 Function.Heal_atk(pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218)))        
                 attack = False
             #print('Click "Attack"')              
@@ -30,7 +30,7 @@ while play:
             time.sleep(32)
             print('Click "full"')      
                            
-        elif pyautogui.locateOnScreen('Pic/expgain.png',region=(1536,339,257,200))!=None: #EXP Gain
+        elif pyautogui.locateOnScreen('Pic/expgain.png',region=(1536,244,257,400))!=None: #EXP Gain
             pyautogui.click(1640,528)
             time.sleep(0.5)
             pyautogui.click(1647,627)
@@ -50,7 +50,7 @@ while play:
         elif pyautogui.locateOnScreen('Pic/useitem.png',region=(1581,399,125,67))!=None:
             pyautogui.click(1643,705)
         #Event Finish
-        elif pyautogui.locateOnScreen('Pic/eventitem.png',region=(1586,265,124,105))!=None:
+        elif pyautogui.locateOnScreen('Pic/eventitem.png',region=(1505,258,200,250))!=None:
             pyautogui.click(1648,800)
         elif pyautogui.locateOnScreen('Pic/eventhome.png',region=(1529,508,261,112))!=None:
             pyautogui.click(pyautogui.locateOnScreen('Pic/eventhome.png',region=(1529,508,261,112)))
@@ -83,6 +83,17 @@ while play:
         #itempicking 
         elif pyautogui.locateOnScreen('Pic/itempick.png',region=(1503,270,270,100))!=None:
             Function.Item_Pick()
+        elif pyautogui.locateOnScreen('Pic/beginners.png',region=(1528,400,280,200))!=None:
+            pyautogui.click(1643,686)
+        #UandF Raid
+        elif pyautogui.locateOnScreen('Pic/event/UandF/prestige.png',region=(1410,642,450,400))!=None:
+            curclick = pyautogui.locateOnScreen('Pic/event/UandF/prestige.png',region=(1410,642,450,400))
+            pyautogui.click(curclick)
+            time.sleep(1.5)
+            pyautogui.click(curclick[0]+285,curclick[1]+93)
+            time.sleep(0.5)
+            pyautogui.click(curclick[0]+84,curclick[1]-139)
+        
        # else:    
         #    print("--- %s seconds ---" % (time.time() - start_time))
 
