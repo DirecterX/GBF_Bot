@@ -20,7 +20,11 @@ def Summon_OK():
 
 def Battle_Attack(atklocate):
     pyautogui.click(atklocate)
-    time.sleep(1)
+    time.sleep(1.5)
+    pyautogui.click(1459,534)
+    pyautogui.moveTo(1622,415)
+    time.sleep(32)
+
     print('Click "Attack"')
  
 
@@ -28,6 +32,7 @@ def Battle_Auto():
     pyautogui.click(pyautogui.locateOnScreen('Pic/semi.png',region=(1402,439,151,146)))
     pyautogui.moveTo(1622,415)  
     time.sleep(32)
+    
     print('Click "semi"')
 
 
@@ -48,10 +53,82 @@ def REAP():
     pyautogui.click(1747,750)
     time.sleep(1)
     
+def LMT_QUEST_LOOT(pos):
+    pyautogui.click(pos[0]+189,pos[1]+521)
+    time.sleep(1)
 
 def HALO_NM():
     pyautogui.click(pyautogui.locateOnScreen('Pic/closehalo.png',region=(1429,713,217,165)))
     print("Close Click")
     time.sleep(1)
      
-        
+def Heal_atk(atkpos):        
+    pyautogui.click(atkpos[0]+348,atkpos[1]-227)
+    time.sleep(1.5)
+    pyautogui.click(atkpos[0]+21,atkpos[1]-194)
+    pyautogui.moveTo(1622,415)
+    time.sleep(5)
+    return 'battle start'
+
+def USE_SUMMON1(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+28,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)    
+
+def USE_SUMMON2(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+118,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)
+    #print(atk)
+
+def USE_SUMMON3(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+188,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)
+
+def USE_SUMMON4(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+268,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)
+
+def USE_SUMMON5(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+338,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)
+
+def USE_SUMMON6(summon_pos):
+    pyautogui.click(summon_pos[0]+372,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+408,summon_pos[1]-60)
+    time.sleep(0.5)
+    pyautogui.click(summon_pos[0]+332,summon_pos[1]-22)
+    time.sleep(0.5)
+    Heal_atk(summon_pos)
+
+def Item_Pick():
+    pyautogui.click(1634,548)
+    time.sleep(0.8)
+    pyautogui.click(1634,598)
+    time.sleep(0.8)
+    pyautogui.click(1634,634)
+
