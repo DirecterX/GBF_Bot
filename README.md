@@ -3,6 +3,8 @@ Bot for Granblue Fantasy using to farming Angel Halo or other material in Specia
 
 # Setup Require
 -Python 3.0+
+
 -pyautogui
+
 -opencv
 
