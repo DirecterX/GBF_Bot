@@ -23,7 +23,7 @@ while play:
         elif pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218),confidence=0.75)!=None: #Attack
             if attack == True:
                 time.sleep(4.2)
-                Function.Heal_atk(pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218),confidence=0.75))        
+                Function.USE_SUMMON1(pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218),confidence=0.75))        
                 attack = False
             if auto_atk == True:   
                 if Function.Auto_Atk(pyautogui.locateOnScreen('Pic/heal.png',region=(1380,647,274,218),confidence=0.75))=="Success":
@@ -40,15 +40,11 @@ while play:
             time.sleep(0.5)
             pyautogui.click(1647,627)
             time.sleep(0.5)
-            pyautogui.click(1640,664)
-            time.sleep(3.5)
-            pyautogui.click(1640,134)
-            time.sleep(1)
-            pyautogui.click(1640,134)
+            pyautogui.click(1640,664)           
             attack = True
             auto_atk = True
-        elif pyautogui.locateOnScreen('Pic/playagain.png',region=(1409,509,400,200),confidence=0.75)!=None: #Play Again
-            Function.Finish_PLAYAGAIN(pyautogui.locateOnScreen('Pic/playagain.png',region=(1409,509,242,96)))
+        elif pyautogui.locateOnScreen('Pic/playagain.png',region=(1409,509,400,200),confidence=0.995)!=None: #Play Again
+            Function.Finish_PLAYAGAIN(pyautogui.locateOnScreen('Pic/playagain.png',region=(1409,509,242,96),confidence=0.995))
         elif pyautogui.locateOnScreen('Pic/halonm.png',region=(1464,203,300,200),confidence=0.75)!=None:#Halo Nightmare Appeared
             pyautogui.click(pyautogui.locateOnScreen('Pic/claimloot.png',region=(1631,717,300,200),confidence=0.75))
         elif pyautogui.locateOnScreen('Pic/needap.png',region=(1521,293,236,123),confidence=0.75)!=None:
@@ -60,7 +56,8 @@ while play:
             pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(curclick[0]-100,curclick[1],200,500),confidence=0.75))
         #Event Finish
         elif pyautogui.locateOnScreen('Pic/eventitem.png',region=(1505,258,200,250),confidence=0.75)!=None:
-            pyautogui.click(1648,800)
+            curclick = pyautogui.locateOnScreen('Pic/eventitem.png',region=(1505,258,200,250),confidence=0.75)
+            pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(curclick[0]-100,curclick[1],200,500),confidence=0.75))
         elif pyautogui.locateOnScreen('Pic/eventhome.png',region=(1529,508,261,112),confidence=0.75)!=None:
             pyautogui.click(pyautogui.locateOnScreen('Pic/eventhome.png',region=(1529,508,261,112),confidence=0.75))
        ##Event Seed of Redemption    
@@ -80,15 +77,15 @@ while play:
         #New Loot
         elif pyautogui.locateOnScreen('Pic/newloot.png',region=(1545,130,200,100),confidence=0.75)!=None:
             curclick=pyautogui.locateOnScreen('Pic/newloot.png',region=(1545,130,200,100),confidence=0.75)
-            pyautogui.click(curclick[0]+41,curclick[1]+481) 
+            pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(curclick[0]-100,curclick[1],300,900),confidence=0.75)) 
         #Fate Episode Unlock
         elif pyautogui.locateOnScreen('Pic/epunlock.png',region=(1540,262,200,100),confidence=0.75)!=None:  
             curclick=pyautogui.locateOnScreen('Pic/epunlock.png',region=(1540,262,200,100),confidence=0.75)
             pyautogui.click(curclick[0]+75,curclick[1]+309)
         #new skill
-        elif pyautogui.locateOnScreen('Pic/newskill.png',region=(1540,262,200,100),confidence=0.75)!=None: 
-            curclick=pyautogui.locateOnScreen('Pic/newskill.png',region=(1540,262,200,100),confidence=0.75)
-            pyautogui.click(curclick[0]+23,curclick[1]+243)
+        elif pyautogui.locateOnScreen('Pic/newskill.png',region=(1540,262,200,300),confidence=0.75)!=None: 
+            curclick=pyautogui.locateOnScreen('Pic/newskill.png',region=(1540,262,200,300),confidence=0.75)
+            pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(curclick[0]-100,curclick[1],300,500),confidence=0.75))
         #itempicking 
         elif pyautogui.locateOnScreen('Pic/itempick.png',region=(1503,270,270,100),confidence=0.75)!=None:
             Function.Item_Pick()
@@ -117,7 +114,19 @@ while play:
                 pos = pyautogui.locateOnScreen('Pic/event/Xeno/Diablo/DiabloClash.png',region=(1414,387,470,608),confidence=0.9)
                 pyautogui.click(pyautogui.locateOnScreen('Pic/selectquest.png',region=(pos[0],pos[1],400,200),confidence=0.8))
                 SelectQuest = False
-              
+        elif pyautogui.locateOnScreen('Pic/rankrose.png',region=(1446,76,450,500),confidence=0.8)!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(1500,450,300,400),confidence=0.75))
+        elif pyautogui.locateOnScreen('Pic/exmastery.png',region=(1446,450,450,500),confidence=0.7)!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/exmastery.png',region=(1500,450,300,400),confidence=0.75))   
+        elif pyautogui.locateOnScreen('Pic/mcex.png',region=(1446,169,450,500),confidence=0.8)!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/ok.png',region=(1500,450,300,400),confidence=0.75))      
+        elif pyautogui.locateOnScreen('Pic/event.png',region=(1498,483,450,500),confidence=0.75)!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/event.png',region=(1498,483,450,500),confidence=0.75))
+        elif pyautogui.locateOnScreen('Pic/event/strum/mercen.png',region=(1501,187,450,500),confidence=0.75)!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/event/strum/extreme.png',region=(1397,483,500,500),confidence=0.75))
+            time.sleep(1)
+            pyautogui.click(pyautogui.locateOnScreen('Pic/event/strum/vh.png',region=(1397,483,500,500),confidence=0.75))
+     
        # else:    
         #    print("--- %s seconds ---" % (time.time() - start_time))
 

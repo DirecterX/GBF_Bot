@@ -31,8 +31,23 @@ while play:
             Function.REAP()
         elif pyautogui.locateOnScreen('Pic/friendrequest.png',region=(1488,308,317,196))!=None:
             Function.Finish_CANCEL()
-        elif pyautogui.locateOnScreen('Pic/useitemok.png',region=(1505,625,282,148))!=None:
-            pyautogui.click(pyautogui.locateOnScreen('Pic/useitemok.png',region=(1505,625,282,148)))
+        elif pyautogui.locateOnScreen('Pic/useitem.png',region=(1581,399,125,67))!=None:
+            pyautogui.click(1643,705)
+        #Event Finish
+        elif pyautogui.locateOnScreen('Pic/eventitem.png',region=(1586,265,124,105))!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/eventok.png',region=(1530,542,242,289)))
+        elif pyautogui.locateOnScreen('Pic/event.png',region=(1529,508,261,112))!=None:
+            pyautogui.click(pyautogui.locateOnScreen('Pic/event.png',region=(1529,508,261,112)))
+       ##Event Spaghetti Syndrome     
+        elif pyautogui.locateOnScreen('Pic/loot.png',region=(1602,451,147,132))!=None:
+            pyautogui.click(1610,750)  #Raid Battle    
+            #pyautogui.click(1649,864)  #Free Quest
+       #Raid Battle
+        elif pyautogui.locateOnScreen('Pic/showdown.png',region=(1519,243,261,104))!=None:
+            pyautogui.click(1646,679)    
+        #Free Quest Event
+        elif pyautogui.locateOnScreen('Pic/strife.png',region=(1553,303,178,118))!=None:
+             pyautogui.click(pyautogui.locateOnScreen('Pic/playevent.png',region=(1759,576,99,70)))
 
        # else:    
         #    print("--- %s seconds ---" % (time.time() - start_time))
